@@ -4,10 +4,10 @@ resource "aws_vpc" "main" {
   enable_dns_hostnames = var.enable_dns_hostnames
 
   tags = merge (
-        var.common_tags,
-        {
-            Name = local.resource_name
-        }
-    )
+    var.common_tags,
+    {
+        Name = local.resource_name
+    }
+  )
   
 }
