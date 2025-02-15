@@ -21,7 +21,7 @@ variable "common_tags" {
 variable "public_subnet_cidrs" {
     type = list
     validation {
-        condition  = length(public_subnet_cidrs) == 2
+        condition  = length(var.public_subnet_cidrs) == 2
         error_message = "please provide 2 public subnet cidrs"
     }
     
